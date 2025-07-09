@@ -1,20 +1,20 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Dashboard from "./pages/dashboard";
-import Planner from "./pages/planner";
-import Skills from "./pages/skills";
-import Certificates from "./pages/certificates";
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import DashboardLayout from "./components/layout/DashboardLayout";
+import DashboardPage from "./pages/Dashboard";
+import VaultPage from "./pages/Vault";
 
-function App() {
+const App = () => {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Dashboard/>} />
-        <Route path="/planner" element={<Planner/>} />
-        <Route path="/skills" element={<Skills/>} />
-        <Route path="/certificates" element={<Certificates/>} />
-      </Routes>
-    </BrowserRouter>
+    <Router>
+      <DashboardLayout>
+        <Routes>
+          <Route path="/" element={<DashboardPage />} />
+          <Route path="/vault" element={<VaultPage />} />
+        </Routes>
+      </DashboardLayout>
+    </Router>
   );
-}
+};
 
 export default App;
