@@ -12,8 +12,8 @@ const ChartSection = ({ skills }) => {
   }, []);
 
   return (
-    <div className="bg-gray-900 p-6 rounded-lg mt-6">
-      <h3 className="text-lg font-semibold mb-4 text-white">Skill Status Overview</h3>
+    <div className="bg-gradient-to-r from-[#1e293b] to-[#0f172a] p-6 rounded-2xl shadow-lg border border-cyan-900/30 mt-6 max-w-md mx-auto">
+      <h3 className="text-lg font-semibold mb-4 text-cyan-300">Skill Status Overview</h3>
       <PieChart width={300} height={250}>
         <Pie
           data={data}
