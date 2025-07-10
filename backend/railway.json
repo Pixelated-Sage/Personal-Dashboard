@@ -2,3 +2,11 @@
   "buildCommand": "pip install -r requirements.txt",
   "startCommand": "gunicorn app.wsgi:application --bind 0.0.0.0:$PORT"
 }
+
+{
+  "build": {
+    "builder": "NIXPACKS",
+    "buildCommand": "cd backend && pip install -r requirements.txt",
+    "startCommand": "cd backend && gunicorn app.wsgi:application --bind 0.0.0.0:$PORT"
+  }
+}
